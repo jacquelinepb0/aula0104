@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Busca</title>
+
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* INPUT */
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #0984e3;
+    }
+
+    /* LISTA */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .item-nome {
+      font-weight: bold;
+    }
+
+    .item-categoria {
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* MENSAGEM */
+    .empty {
+      text-align: center;
+      color: #999;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Buscar Produtos</h1>
+
+    <!-- INPUT DE BUSCA -->
+    <input 
+      type="text" 
+      id="inputBusca" 
+      placeholder="Digite para buscar..."
+    >
+
+    <!-- LISTA -->
+    <ul id="lista">
+        
+    </ul>
+
+
+        
+
+  <script src="index.js"></script>
+</body>
+</html>
