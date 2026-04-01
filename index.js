@@ -36,8 +36,29 @@ for(let i = 0; i < produtos.length; i++) {
 }
 
 
+const input = document.getElementById("inputBusca");
+// const produtosfiltrados = document.querySelectorAll("produtos");
+
+input.addEventListener('input', (event) => {
+    const produtosFiltrados = produtos.filter(produto => {
+        const valordoInput = event.target.value.toLowerCase();
+        const nomeDoProduto = produto.nome.toLowerCase();
+        return nomeDoProduto.startsWith(valordoInput);
+    });
+    console.log(produtosFiltrados);
+     });
+    
 
 
+// input.addEventListener('input', (event) => {
+// console.log(event.target.value)
+// } )
+
+// const Produtos = event.target.value.toLowerCase()
+
+// produtos.forEach((item) => {
+
+// } )
 
 
 
@@ -63,3 +84,4 @@ for(let i = 0; i < produtos.length; i++) {
 //      <div class="item-nome">${produto.nome}</div>
 //      '
 // )
+
