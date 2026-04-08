@@ -36,18 +36,47 @@ for(let i = 0; i < produtos.length; i++) {
 }
 
 
-const input = document.getElementById("inputBusca");
+const input = document.getElementById('inputBusca');
 // const produtosfiltrados = document.querySelectorAll("produtos");
 
 input.addEventListener('input', (event) => {
     const produtosFiltrados = produtos.filter(produto => {
         const valordoInput = event.target.value.toLowerCase();
         const nomeDoProduto = produto.nome.toLowerCase();
-        return nomeDoProduto.startsWith(valordoInput);
+        const categoria = produto.categoria.toLowerCase();
+        
+        return nomeDoProduto.startsWith(valordoInput) || categoria.startsWith(valordoInput)
     });
-    console.log(produtosFiltrados);
+
+    lista.innerHTML = '';
+  produtosFiltrados.map(produto => {
+   lista.innerHTML += `
+      <li>
+        <div class="item-nome">${produto.nome}</div>
+        <div class="item-categoria">${produto.categoria}</div>
+      </li>  
+`
+
+});
+
      });
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // input.addEventListener('input', (event) => {
